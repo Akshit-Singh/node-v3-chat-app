@@ -46,7 +46,7 @@ io.on('connection', (socket)=>{
         }
 
         io.to(user.room).emit('message', generateMessage(user.username, message))
-        callback('Delivered!')
+        callback()
     })
 
     socket.on('disconnect', ()=>{
